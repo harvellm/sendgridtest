@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VDPUtilities" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VeriVDP" />
+      <xsd:import schemaLocation="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVeriVDP_Info_GetPageCounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetPageCounts" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Info_GetPageCounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetPageCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_ConvertHTMLToPageflexXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertHTMLToPageflexXML" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_ConvertHTMLToPageflexXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertHTMLToPageflexXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Build_VDPAsset_InputMessage">
+    <wsdl:part name="parameters" element="tns:Build_VDPAsset" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Build_VDPAsset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Build_VDPAssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_Pageflex_InputMessage">
+    <wsdl:part name="parameters" element="tns:Submit_Pageflex" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_Pageflex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Submit_PageflexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Info_GetJobStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetJobStatus" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Info_GetJobStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetJobStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Info_GetTaskLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetTaskLog" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Info_GetTaskLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Info_GetTaskLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_XMPie_InputMessage">
+    <wsdl:part name="parameters" element="tns:Submit_XMPie" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_XMPie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Submit_XMPieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Submit" />
+  </wsdl:message>
+  <wsdl:message name="IVeriVDP_Submit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVeriVDP">
+    <wsdl:operation name="Info_GetPageCounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetPageCounts" message="tns:IVeriVDP_Info_GetPageCounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetPageCountsResponse" message="tns:IVeriVDP_Info_GetPageCounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertHTMLToPageflexXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/ConvertHTMLToPageflexXML" message="tns:IVeriVDP_ConvertHTMLToPageflexXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/ConvertHTMLToPageflexXMLResponse" message="tns:IVeriVDP_ConvertHTMLToPageflexXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Build_VDPAsset">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Build_VDPAsset" message="tns:IVeriVDP_Build_VDPAsset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Build_VDPAssetResponse" message="tns:IVeriVDP_Build_VDPAsset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit_Pageflex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Submit_Pageflex" message="tns:IVeriVDP_Submit_Pageflex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Submit_PageflexResponse" message="tns:IVeriVDP_Submit_Pageflex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Info_GetJobStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetJobStatus" message="tns:IVeriVDP_Info_GetJobStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetJobStatusResponse" message="tns:IVeriVDP_Info_GetJobStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Info_GetTaskLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetTaskLog" message="tns:IVeriVDP_Info_GetTaskLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Info_GetTaskLogResponse" message="tns:IVeriVDP_Info_GetTaskLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit_XMPie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Submit_XMPie" message="tns:IVeriVDP_Submit_XMPie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/Submit_XMPieResponse" message="tns:IVeriVDP_Submit_XMPie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVeriVDP/Submit" message="tns:IVeriVDP_Submit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVeriVDP/SubmitResponse" message="tns:IVeriVDP_Submit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVeriVDP" type="tns:IVeriVDP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Info_GetPageCounts">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Info_GetPageCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertHTMLToPageflexXML">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/ConvertHTMLToPageflexXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Build_VDPAsset">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Build_VDPAsset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit_Pageflex">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Submit_Pageflex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Info_GetJobStatus">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Info_GetJobStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Info_GetTaskLog">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Info_GetTaskLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit_XMPie">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Submit_XMPie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <soap:operation soapAction="http://tempuri.org/IVeriVDP/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VDPUtilities">
+    <wsdl:port name="BasicHttpBinding_IVeriVDP" binding="tns:BasicHttpBinding_IVeriVDP">
+      <soap:address location="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="525fed23-d6d2-4789-bf8b-525cd9fae192" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hdcversvc01.cgx.net/Veritas.VDP.stage/verivdp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VeriVDP.disco" MetadataType="Disco" ID="4f45a153-df31-40be-bfe4-e4ae2ab8d2aa" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?disco" />
+    <MetadataFile FileName="VeriVDP.xsd" MetadataType="Schema" ID="af7c81e8-586e-4ef0-a799-4889cf49f358" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd4" />
+    <MetadataFile FileName="VeriVDP1.xsd" MetadataType="Schema" ID="a78ae73a-7da8-4212-a0d7-b312527e6905" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd2" />
+    <MetadataFile FileName="VeriVDP2.xsd" MetadataType="Schema" ID="d108553f-0c44-48f8-8ba0-c6348e23a4da" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd3" />
+    <MetadataFile FileName="VeriVDP3.xsd" MetadataType="Schema" ID="8d9c76bd-4536-4ce1-9bed-a3c8ef2a466b" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd0" />
+    <MetadataFile FileName="VeriVDP4.xsd" MetadataType="Schema" ID="7333e9a4-10ad-4601-9ba3-19162af06795" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?xsd=xsd1" />
+    <MetadataFile FileName="VDPUtilities.wsdl" MetadataType="Wsdl" ID="90310bd6-891c-4f2e-a293-22b5c204ead6" SourceId="1" SourceUrl="http://hdcversvc01.cgx.net/Veritas.VDP.Stage/VeriVDP.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
